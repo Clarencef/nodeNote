@@ -1,0 +1,23 @@
+{
+  "name": "first-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Clarencef/nodeNote.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "albert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clarencef/nodeNote/issues"
+  },
+  "homepage": "https://github.com/Clarencef/nodeNote#readme"
+}
