@@ -1,0 +1,15 @@
+{
+  "name": "mongochat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Albert Fang <hr00090241@gmail.com> (https://github.com/Clarencef/)",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "2.2.30",
+    "socket.io": "2.0.3"
+  }
+}
