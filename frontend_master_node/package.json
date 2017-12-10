@@ -21,7 +21,12 @@
   },
   "homepage": "https://github.com/Clarencef/nodeNote#readme",
   "dependencies": {
+    "asynquence": "0.10.2",
+    "asynquence-contrib": "0.28.2",
     "body-parser": "1.17.1",
-    "express": "4.15.2"
+    "express": "4.15.2",
+    "minimist": "1.2.0",
+    "node-static": "0.7.10",
+    "socket.io": "2.0.4"
   }
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>HIHIHIHI</h1>
+  <p id="hello"></p>
+  <div class="msg-container"></div>
+  <form id="form">
+    <input class="input1" type="text" name="text">
+    <button type="submit" value="Submit">submit</button>
+  </form>
+</body>
+<script>
+  var socket = io.connect("/");
+  var form = document.getElementById("form");
+  var input = document.getElementsByClassName("input1")[0];
+  var msgContinaer = document.getElementsByClassName("msg-container")[0];
+  socket.on("connect", function () {
+    console.log("I CONNECTED");
+  })
+  socket.on("disconnect", function () {
+    console.log("I disconnected");
+  });
+  socket.on("hello", function (num) {
+    document.getElementById("hello").innerHTML ='Hello Server: ' + num;
+  });
+  socket.on("submitMsg", function (data) {
+    console.log(data);
+    msgContinaer.innerHTML += data + "<br/>";
+  })
+  window.onload = function (e) {
+    form.addEventListener('submit', function (e) {
+      if(!input.value) return;
+      e.preventDefault();
+      socket.emit("submitMsg",input.value);
+      input.value = "";
+    })
+  }
+</script>
+</html>
